@@ -40,6 +40,7 @@
 (define (calc-rpn input)
   (calc-rpn-helper input '()))
 
+(display "Beginning program") (newline)
 (write (calc-rpn '(1 2 +))) (newline)
 (write (calc-rpn '(1 2 + 3 *))) (newline)
 (write (calc-rpn '(1 2 3 + *))) (newline)

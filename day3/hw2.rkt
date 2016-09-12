@@ -1,18 +1,48 @@
 #lang racket
 
-;;; Student Name: Frankly Olin [change to your name]
+;;; Student Name: Griffin Tschurwald [change to your name]
 ;;;
 ;;; Check one:
 ;;; [ ] I completed this assignment without assistance or external resources.
-;;; [ ] I completed this assignment with assistance from ___
-;;;     and/or using these external resources: ___
+;;; [X] I completed this assignment with assistance from ___
+;;;     and/or using these external resources: Racket Documentation
 
 ;;; 1.  Create a calculator that takes one argument: a list that represents an expression.
 
+(define (calc-find-symbol y)
+  (cond ((eq? 'ADD y) +)
+        ((eq? 'SUB y) -)
+        ((eq? 'MUL y) *)
+        ((eq? 'DIV y) /)
+        ((eq? 'GT y) >)
+        ((eq? 'LT y) <)
+        ((eq? 'GE y) >=)
+        ((eq? 'LE y) <=)
+        ((eq? 'EQ y) =)
+        ((eq? 'NEQ y) (lambda (x y) (not (eq? x y)))) ;;lambda functions for these, no built in symbols that i know of
+        ((eq? 'AND y) (lambda (x y) (and x y)))
+        ((eq? 'NOR y) (lambda (x y) (nor x y)))
+        ((eq? 'NOT y) (lambda (x y) (not x y)))
+        )
+  )
+            
 (define (calculate x)
-  your-code-here)
+  (if (number? x) ;;if x is a number just return it, this is for recursion
+      x
+      (if (eq? (first x) 'IPH) ;; check if first symbol is IPH for special case
+          (if (calculate (second x))
+              (calculate (third x))
+              (calculate (fourth x))
+              )
+          ((calc-find-symbol (first x)) (calculate (second x)) (calculate (third x)))
+          )
+  )
+ )
 
 (calculate '(ADD 3 4)) ;; --> 7
+(calculate '(SUB 3 4)) ;; --> -1
+(calculate '(MUL 3 4)) ;; --> 12
+(calculate '(DIV 3 4)) ;; --> .75
 
 ;;; 2. Expand the calculator's operation to allow for arguments that are themselves well-formed arithmetic expressions.
 
@@ -28,7 +58,7 @@
 
 ;;; 4. Add boolean operations ANND, ORR, NOTT
 
-(calculate '(AND (GT (ADD 3 4) (MUL 5 6))) (LE (ADD 3 (MUL 4 5)) (SUB 0 (SUB (ADD 3 4) (MUL 5 6)))))) ;; --> #f
+;;(calculate '(AND (GT (ADD 3 4) (MUL 5 6))) (LE (ADD 3 (MUL 4 5)) (SUB 0 (SUB (ADD 3 4) (MUL 5 6))))) ;; --> #f
 
 ;;; 5. Add IPH
 
