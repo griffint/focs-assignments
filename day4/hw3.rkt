@@ -56,14 +56,11 @@
   )
             
 (define (calculate x)
-  (if (number? x) ;;if x is a number just return it, this is for recursion
-      x
-      (if (eq? (first x) 'IPH) ;; check if first symbol is IPH for special case
-          (if (calculate (second x))
-              (calculate (third x))
-              (calculate (fourth x))
-              )
-          ((calc-find-symbol (first x)) (calculate (second x)) (calculate (third x)))
-          )
+  (cond ((number? x) x) ;;if x is a number just return it, this is for recursion
+      ((eq? (first x) 'IPH) (if (calculate (second x)) (calculate (third x)) (calculate (fourth x)) ) );; check if first symbol is IPH for special case
+      ((eq? (first x) 'evaluate) (assq (second x) (third x)))
+      (else ((calc-find-symbol (first x)) (calculate (second x)) (calculate (third x))))
   )
  )
+
+(display (calculate '(evaluate cat ( (party 1) (cat 3)))))
