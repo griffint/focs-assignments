@@ -8,3 +8,21 @@ Check one:
     a) Assume that language L is regular. String w such that w >= c and w is split up as xyz.
     For the string aaaa, where w is "aa", repeating w gives us a string whose length is no 
     longer a power of 2. Therefore, we don't have a regular language.
+
+    b) Regular.
+
+    c) Assuming that language L is regular, we choose and string where String w >= c annd
+    w is split up as xyzb where b is the reverse of xyzb. If y loops a number of times, b is no
+    longer the reverse of xy^az. Therefore, we don't have a regular language.
+
+    2)
+    a)  L={𝚊n𝚋n∣n∈ℕ} 
+        My word = a9b9
+        My choice = a9b3 from that word
+        computer chose = the first 2 b's
+        I repeated twice and won with a9b11
+    b) L={𝚊n∣n is prime}
+        My word = a19
+        My choice = a19
+        Computer chose = a7 
+        My winning string = a33
