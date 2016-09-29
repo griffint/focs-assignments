@@ -1,0 +1,10 @@
+Student Name: Frankly Olin [change to your name]
+Check one:
+[ ] I completed this assignment without assistance or external resources.
+[ ] I completed this assignment with assistance from ___
+   and/or using these external resources: ___
+
+   1)
+    a) Assume that language L is regular. String w such that w >= c and w is split up as xyz.
+    For the string aaaa, where w is "aa", repeating w gives us a string whose length is no 
+    longer a power of 2. Therefore, we don't have a regular language.
