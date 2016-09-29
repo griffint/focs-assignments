@@ -9,7 +9,7 @@ Check one:
     For the string aaaa, where w is "aa", repeating w gives us a string whose length is no 
     longer a power of 2. Therefore, we don't have a regular language.
 
-    b) Regular.
+    b) Regular. the expression would be /(1^+0*1^+)*(0^+1*0^+)*/
 
     c) Assuming that language L is regular, we choose and string where String w >= c annd
     w is split up as xyzb where b is the reverse of xyzb. If y loops a number of times, b is no
