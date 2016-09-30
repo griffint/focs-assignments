@@ -27,4 +27,4 @@ Check one:
         Computer chose = a7 
         My winning string = a33
 
-    3) see attached jpg
+    3) see attached jpg, it's for problem 2a
