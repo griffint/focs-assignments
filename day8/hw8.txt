@@ -1,6 +1,6 @@
-Student Name: Frankly Olin [change to your name]
+Student Name: Griffin Tschurwld[change to your name]
 Check one:
-[ ] I completed this assignment without assistance or external resources.
+[ x] I completed this assignment without assistance or external resources.
 [ ] I completed this assignment with assistance from ___
    and/or using these external resources: ___
 
@@ -9,7 +9,7 @@ Check one:
     For the string aaaa, where w is "aa", repeating w gives us a string whose length is no 
     longer a power of 2. Therefore, we don't have a regular language.
 
-    b) Regular. the expression would be /(1^+0*1^+)*(0^+1*0^+)*/
+    b) Regular. the expression would be /(1^+0*1^+)^N(0^+1*0^+)^N/
 
     c) Assuming that language L is regular, we choose and string where String w >= c annd
     w is split up as xyzb where b is the reverse of xyzb. If y loops a number of times, b is no
@@ -26,3 +26,5 @@ Check one:
         My choice = a19
         Computer chose = a7 
         My winning string = a33
+
+    3) see attached jpg
