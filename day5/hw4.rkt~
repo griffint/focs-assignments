@@ -1,0 +1,17 @@
+#lang racket
+
+;;; Student Name: Griffin Tschurwald[change to your name]
+;;;
+;;; Check one:
+;;; [ ] I completed this assignment without assistance or external resources.
+;;; [ ] I completed this assignment with assistance from ___
+;;;     and/or using these external resources: ___
+
+(define (print-square x)
+  (display "the square of ")
+  (display x)
+  (display " is ")
+  (display (* x x)))
+
+(display “enter a number”)
+(print-square (read))
