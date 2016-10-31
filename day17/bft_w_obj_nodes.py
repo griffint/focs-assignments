@@ -42,6 +42,8 @@ class Node(object):
 
     def __init__(self, label):
         self.label = label
+        self.parent = None
+        self.distance = None
 
     def __repr__(self):
         return self.label
